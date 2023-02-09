@@ -3,6 +3,15 @@ OnlineAttandance UI
 
 React.js와 Material UI를 활용해서 만드는 프로젝트입니다.
 
+Material UI
+https://mui.com/material-ui/getting-started/installation/
+
+Create-React-App
+https://create-react-app.dev/
+
+node.js
+https://nodejs.org/en/
+
 기능
   1. 오늘의 말씀
   2. 출석체크
