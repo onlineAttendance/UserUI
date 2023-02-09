@@ -17,5 +17,16 @@ node js가 설치되어있어야합니다.
 
 1. npm install
   필요한 패키지를 다운받는 명령어
-2. npm start
+2. cd online-attendance
+  UserUI/online-attendance 경로까지 이동해야합니다.
+3. npm start
   서버를 실행시키는 명령어
+
+디렉토리 구성
+online-attendance
+  src
+    asset // 이미지, 동영상을 관리하기 위한 폴더
+    Component // Component를 관리하기 위한 폴더
+    Page // Page를 관리하기 위한 폴더
+    store //state 관리를 위한 폴더
+    UI // UI 작업중 공통으로 사용되는 것들을 관리하기 위한 폴더
