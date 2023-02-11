@@ -5,8 +5,9 @@ import AppBar from "./Components/AppBar";
 import BottomNav from "./Components/BottomNav";
 import Container from "@mui/material/Container";
 import MainContainer from "./UI/MainContainer";
-import Attendance from "./Page/Attendance";
+import Attendance from "./Content/Attendance";
 import Question from "./Components/Question";
+import TodayWord from "./Content/TodayWord";
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -29,14 +30,16 @@ const questions = [
 
 function App() {
   return (
-    <Box sx={{ width: "100%" }}>
-      <AppBar />
-      <Container maxWidth="xs" sx={{ mt: 7, mb: 8 }}>
-
-        <MainContainer/>
-      </Container>
-      <BottomNav />
-    </Box>
+    <>
+      <Box sx={{ flexGrow:0 }}>
+        <AppBar />
+        <MainContainer>
+          <Attendance />
+          <TodayWord />
+        </MainContainer>
+        <BottomNav />
+      </Box>
+    </>
   );
 }
 
