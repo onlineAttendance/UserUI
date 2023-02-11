@@ -35,7 +35,27 @@ node js가 설치되어있어야합니다.
 online-attendance
   src
     asset // 이미지, 동영상을 관리하기 위한 폴더
+      
     Component // Component를 관리하기 위한 폴더
-    Page // Page를 관리하기 위한 폴더
+      AppBar.js // 상단 앱바
+      BottomNav.js // 하단 네비게이션
+      Question.js // 오늘의 말씀 질문
+      footer.js // 푸터
+      CardComponent.js // 오늘의 말씀 카드 UI
+      
+    Content // Page를 관리하기 위한 폴더
+      Attendance.js //온라인 출석부 콘텐츠
+      MyPage.js //정보수정 콘텐츠 
+      SignIn.js //로그인 콘텐츠
+      SignUp.js //회원가입 콘텐츠
+      TodayWord.js //오늘의 말씀 콘텐츠
     store //state 관리를 위한 폴더
+      
     UI // UI 작업중 공통으로 사용되는 것들을 관리하기 위한 폴더
+      MainContainer.js // 전체 UI 구성
+      Modal.js // 로그인,회원가입,정보수정 페이지가 보여질 모달
+     
+    App.js // 컴포넌트들을 한번에 모아서 보여주는 곳
+    
+
+
