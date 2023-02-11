@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, IconButton, Box } from "@mui/material";
 import { Book, CheckCircle, Login, AccountCircle } from "@mui/icons-material";
-
+import NewModal from "../UI/NewModal";
+import MyPage from "../Content/MyPage";
+import SignIn from "../Content/SignIn";
+import SignUp from "../Content/SignUp";
 const Appbar = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [isAttendance, setIsAttendance] = useState(false);
@@ -15,6 +18,7 @@ const Appbar = () => {
   };
 
   return (
+    <>
     <Box sx={{display:'flex', justifyContent:'space-between'}}>
       <AppBar >
         <Toolbar>
@@ -50,6 +54,10 @@ const Appbar = () => {
         </Toolbar>
       </AppBar>
     </Box>
+    <NewModal>
+      <SignIn></SignIn>
+    </NewModal>
+    </>
   );
 };
 
