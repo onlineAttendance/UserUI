@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import {
   Box,
   Paper,
@@ -10,7 +10,13 @@ import {
   Stack,
 } from "@mui/material";
 import Login from "@mui/icons-material/Login";
+import AuthContext from "../store/auth-context";
+import ModalContext from "../store/modal-context";
+
 const SignUp = (props) => {
+  const actx = useContext(AuthContext);
+  const mctx = useContext(ModalContext);
+
   return (
     <Box
       sx={{
@@ -50,7 +56,7 @@ const SignUp = (props) => {
           <TextField label="비밀번호 확인" variant="outlined"></TextField>
           <Grid container>
             <Grid item xs={6}>
-              <Button variant="contained" fullWidth>
+              <Button variant="contained" fullWidth onClick={mctx.onHandleClose}>
                 취소
               </Button>
             </Grid>

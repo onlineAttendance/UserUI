@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import {
   Box,
   Avatar,
@@ -9,8 +9,12 @@ import {
   TextField,
   Stack,
 } from "@mui/material";
+import AuthContext from "../store/auth-context";
+import ModalContext from "../store/modal-context";
 
 const MyPage = (props) => {
+  const actx = useContext(AuthContext);
+  const mctx = useContext(ModalContext);
   return (
     <Box
       sx={{
@@ -40,7 +44,7 @@ const MyPage = (props) => {
 
           <Grid container>
             <Grid item xs={6}>
-              <Button variant="contained" fullWidth>취소</Button>
+              <Button variant="contained" fullWidth onClick={mctx.onHandleClose}>취소</Button>
             </Grid>
             <Grid item xs={6}>
               <Button variant="contained" fullWidth>수정</Button>
